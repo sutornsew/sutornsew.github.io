@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="/img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/hire-me.css">
+  <title>{{ .Title }}{{ if ne .Page.UrlPath "" }} - {{ .Site.Title }}{{ end }}</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">~home</a>
+    </nav>
+  </header>
+  <main>
+    {{ .Content }}
+  </main>
+</body>
+</html>
