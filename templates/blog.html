@@ -1,0 +1,11 @@
+{{ template "_header.html" . }}
+
+{{ .Content }}
+
+<ul>
+{{ range .Posts }}
+    <li><a href="/{{ .UrlPath }}">{{ .Title }}</a> <small>{{ .DatePublished.Format "Jan 02, 2006" }}</small></li>
+{{ end }}
+</ul>
+
+{{ template "_footer.html" . }}
