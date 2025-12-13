@@ -25,10 +25,6 @@ jobs:
         run: go install git.sr.ht/~dvko/gozer@latest
       - name: Build
         run: gozer build 
-      - name: Manually Change 404 directory
-        run: |
-            mv build/404/index.html build/404.html /
-            rmdir build/404
       - name: Upload static files as artifact
         id: deployment
         uses: actions/upload-pages-artifact@v4.0.0
